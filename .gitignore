@@ -22,8 +22,7 @@ bin/
 *.db
 *.js
 
-scheduling.c
-*.o
-*.a
-
-Scheduling/bridge.h
+build
+SchedulingiOS/SchedulingiOS.xcodeproj/xcuserdata
+SchedulingiOS/SchedulingiOS.xcuserdatad/
+SchedulingiOS/SchedulingiOS.xcodeproj/project.xcworkspace/xcuserdata

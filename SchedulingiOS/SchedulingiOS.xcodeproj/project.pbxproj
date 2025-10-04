@@ -7,68 +7,88 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C93CD9D2E917EEC00A3D89F /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C93CD982E917D2A00A3D89F /* libresolv.tbd */; };
+		9C814DC12E91AE610088DEB6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */; };
+		9C814DC22E91AE610088DEB6 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9C814DAB2E91ADBC0088DEB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A7D88B5423E2437C00DCD162;
+			remoteInfo = "Framework-iOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		9C93CD9C2E917ECE00A3D89F /* Embed Libraries */ = {
+		9C814DC32E91AE610088DEB6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9C814DC22E91AE610088DEB6 /* SDL2.framework in Embed Frameworks */,
 			);
-			name = "Embed Libraries";
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9C93CD852E917CAE00A3D89F /* Scheduling.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scheduling.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C93CD982E917D2A00A3D89F /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		9C814D7B2E91AD120088DEB6 /* SchedulingiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchedulingiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ../thirdparty/SDL/Xcode/SDL/SDL.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9C93CD872E917CAE00A3D89F /* Scheduling */ = {
+		9C814D7D2E91AD120088DEB6 /* SchedulingiOS */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Scheduling;
+			path = SchedulingiOS;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9C93CD822E917CAE00A3D89F /* Frameworks */ = {
+		9C814D782E91AD120088DEB6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C93CD9D2E917EEC00A3D89F /* libresolv.tbd in Frameworks */,
+				9C814DC12E91AE610088DEB6 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9C93CD7C2E917CAE00A3D89F = {
+		9C814D722E91AD120088DEB6 = {
 			isa = PBXGroup;
 			children = (
-				9C93CD872E917CAE00A3D89F /* Scheduling */,
-				9C93CD932E917D0900A3D89F /* Frameworks */,
-				9C93CD862E917CAE00A3D89F /* Products */,
+				9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */,
+				9C814D7D2E91AD120088DEB6 /* SchedulingiOS */,
+				9C814DBF2E91AE4A0088DEB6 /* Frameworks */,
+				9C814D7C2E91AD120088DEB6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9C93CD862E917CAE00A3D89F /* Products */ = {
+		9C814D7C2E91AD120088DEB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C93CD852E917CAE00A3D89F /* Scheduling.app */,
+				9C814D7B2E91AD120088DEB6 /* SchedulingiOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C93CD932E917D0900A3D89F /* Frameworks */ = {
+		9C814D9C2E91ADBC0088DEB6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C93CD982E917D2A00A3D89F /* libresolv.tbd */,
+				9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9C814DBF2E91AE4A0088DEB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -76,65 +96,81 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C93CD842E917CAE00A3D89F /* Scheduling */ = {
+		9C814D7A2E91AD120088DEB6 /* SchedulingiOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C93CD902E917CB000A3D89F /* Build configuration list for PBXNativeTarget "Scheduling" */;
+			buildConfigurationList = 9C814D962E91AD130088DEB6 /* Build configuration list for PBXNativeTarget "SchedulingiOS" */;
 			buildPhases = (
-				9C93CD812E917CAE00A3D89F /* Sources */,
-				9C93CD822E917CAE00A3D89F /* Frameworks */,
-				9C93CD832E917CAE00A3D89F /* Resources */,
-				9C93CD9C2E917ECE00A3D89F /* Embed Libraries */,
+				9C814D772E91AD120088DEB6 /* Sources */,
+				9C814D782E91AD120088DEB6 /* Frameworks */,
+				9C814D792E91AD120088DEB6 /* Resources */,
+				9C814DC32E91AE610088DEB6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9C93CD872E917CAE00A3D89F /* Scheduling */,
+				9C814D7D2E91AD120088DEB6 /* SchedulingiOS */,
 			);
-			name = Scheduling;
+			name = SchedulingiOS;
 			packageProductDependencies = (
 			);
-			productName = Scheduling;
-			productReference = 9C93CD852E917CAE00A3D89F /* Scheduling.app */;
+			productName = SchedulingiOS;
+			productReference = 9C814D7B2E91AD120088DEB6 /* SchedulingiOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9C93CD7D2E917CAE00A3D89F /* Project object */ = {
+		9C814D732E91AD120088DEB6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					9C93CD842E917CAE00A3D89F = {
+					9C814D7A2E91AD120088DEB6 = {
 						CreatedOnToolsVersion = 26.0.1;
+						LastSwiftMigration = 2600;
 					};
 				};
 			};
-			buildConfigurationList = 9C93CD802E917CAE00A3D89F /* Build configuration list for PBXProject "Scheduling" */;
+			buildConfigurationList = 9C814D762E91AD120088DEB6 /* Build configuration list for PBXProject "SchedulingiOS" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9C93CD7C2E917CAE00A3D89F;
+			mainGroup = 9C814D722E91AD120088DEB6;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9C93CD862E917CAE00A3D89F /* Products */;
+			productRefGroup = 9C814D7C2E91AD120088DEB6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9C814D9C2E91ADBC0088DEB6 /* Products */;
+					ProjectRef = 9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
-				9C93CD842E917CAE00A3D89F /* Scheduling */,
+				9C814D7A2E91AD120088DEB6 /* SchedulingiOS */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDL2.framework;
+			remoteRef = 9C814DAB2E91ADBC0088DEB6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
-		9C93CD832E917CAE00A3D89F /* Resources */ = {
+		9C814D792E91AD120088DEB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -144,7 +180,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9C93CD812E917CAE00A3D89F /* Sources */ = {
+		9C814D772E91AD120088DEB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -154,7 +190,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9C93CD8E2E917CB000A3D89F /* Debug */ = {
+		9C814D942E91AD130088DEB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -213,12 +249,10 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		9C93CD8F2E917CB000A3D89F /* Release */ = {
+		9C814D952E91AD130088DEB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -270,85 +304,69 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		9C93CD912E917CB000A3D89F /* Debug */ = {
+		9C814D972E91AD130088DEB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 86482J9ZX3;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../thirdparty/SDL/include\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = metal;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Scheduling",
-					"$(PROJECT_DIR)/LIbraries",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.srevrtt.schedulingapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srevrtt.SchedulingiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = ../bridge.h;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		9C93CD922E917CB000A3D89F /* Release */ = {
+		9C814D982E91AD130088DEB6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 86482J9ZX3;
-				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)";
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../thirdparty/SDL/include\"";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = metal;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Scheduling",
-					"$(PROJECT_DIR)/LIbraries",
-				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = org.srevrtt.schedulingapp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.srevrtt.SchedulingiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
-				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = ../bridge.h;
-				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -356,25 +374,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C93CD802E917CAE00A3D89F /* Build configuration list for PBXProject "Scheduling" */ = {
+		9C814D762E91AD120088DEB6 /* Build configuration list for PBXProject "SchedulingiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C93CD8E2E917CB000A3D89F /* Debug */,
-				9C93CD8F2E917CB000A3D89F /* Release */,
+				9C814D942E91AD130088DEB6 /* Debug */,
+				9C814D952E91AD130088DEB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C93CD902E917CB000A3D89F /* Build configuration list for PBXNativeTarget "Scheduling" */ = {
+		9C814D962E91AD130088DEB6 /* Build configuration list for PBXNativeTarget "SchedulingiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9C93CD912E917CB000A3D89F /* Debug */,
-				9C93CD922E917CB000A3D89F /* Release */,
+				9C814D972E91AD130088DEB6 /* Debug */,
+				9C814D982E91AD130088DEB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9C93CD7D2E917CAE00A3D89F /* Project object */;
+	rootObject = 9C814D732E91AD120088DEB6 /* Project object */;
 }

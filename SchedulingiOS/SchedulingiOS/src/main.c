@@ -12,10 +12,14 @@
 #include "include/shared.h"
 #include "objc_bridge.h"
 
-extern void sch_loop(void);
+// V functions
+extern void app_init(void);
+extern void app_loop(void);
 
 int main(int argc, char *argv[]) {
     initialize_sdl();
+    
+    app_init();
     
     // App loop
     SDL_Event event;
@@ -32,7 +36,7 @@ int main(int argc, char *argv[]) {
         
         SDL_SetRenderDrawColor(renderer, 10, 10, 10, 255);
         SDL_RenderClear(renderer);
-        sch_loop(); // Called in V
+        app_loop(); // Called in V
         SDL_RenderPresent(renderer);
 
         SDL_Delay(1);

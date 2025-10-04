@@ -14,8 +14,8 @@
 #include <SDL2_ttf/SDL_ttf.h>
 
 // TODO: Globals are evil.
-SDL_Window *wnd;
-SDL_Renderer *ren;
+static SDL_Window *wnd;
+static SDL_Renderer *ren;
 
 // Helper function
 static void err(const char *str) {

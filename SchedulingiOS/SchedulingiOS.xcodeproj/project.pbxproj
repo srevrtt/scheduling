@@ -10,6 +10,8 @@
 		9C814DC12E91AE610088DEB6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */; };
 		9C814DC22E91AE610088DEB6 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C814DDF2E91BE290088DEB6 /* libscheduling.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DDE2E91BE290088DEB6 /* libscheduling.a */; };
+		9C9780B72E91E03B00310CE3 /* SDL2_ttf.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9780B22E91E01000310CE3 /* SDL2_ttf.framework */; };
+		9C9780B82E91E03B00310CE3 /* SDL2_ttf.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9780B22E91E01000310CE3 /* SDL2_ttf.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -20,6 +22,13 @@
 			remoteGlobalIDString = A7D88B5423E2437C00DCD162;
 			remoteInfo = "Framework-iOS";
 		};
+		9C9780B12E91E01000310CE3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C97808A2E91E01000310CE3 /* SDL_ttf.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = BE48FD6707AFA17000BB41DA;
+			remoteInfo = Framework;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +38,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				9C9780B82E91E03B00310CE3 /* SDL2_ttf.framework in Embed Frameworks */,
 				9C814DC22E91AE610088DEB6 /* SDL2.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -40,6 +50,7 @@
 		9C814D7B2E91AD120088DEB6 /* SchedulingiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchedulingiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ../thirdparty/SDL/Xcode/SDL/SDL.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9C814DDE2E91BE290088DEB6 /* libscheduling.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libscheduling.a; path = Libraries/libscheduling.a; sourceTree = "<group>"; };
+		9C97808A2E91E01000310CE3 /* SDL_ttf.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL_ttf.xcodeproj; path = ../thirdparty/SDL_ttf/Xcode/SDL_ttf.xcodeproj; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -56,6 +67,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C814DC12E91AE610088DEB6 /* SDL2.framework in Frameworks */,
+				9C9780B72E91E03B00310CE3 /* SDL2_ttf.framework in Frameworks */,
 				9C814DDF2E91BE290088DEB6 /* libscheduling.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -66,6 +78,7 @@
 		9C814D722E91AD120088DEB6 = {
 			isa = PBXGroup;
 			children = (
+				9C97808A2E91E01000310CE3 /* SDL_ttf.xcodeproj */,
 				9C814DDE2E91BE290088DEB6 /* libscheduling.a */,
 				9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */,
 				9C814D7D2E91AD120088DEB6 /* SchedulingiOS */,
@@ -95,6 +108,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C9780AC2E91E01000310CE3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9C9780B22E91E01000310CE3 /* SDL2_ttf.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +176,10 @@
 					ProductGroup = 9C814D9C2E91ADBC0088DEB6 /* Products */;
 					ProjectRef = 9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */;
 				},
+				{
+					ProductGroup = 9C9780AC2E91E01000310CE3 /* Products */;
+					ProjectRef = 9C97808A2E91E01000310CE3 /* SDL_ttf.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -169,6 +194,13 @@
 			fileType = wrapper.framework;
 			path = SDL2.framework;
 			remoteRef = 9C814DAB2E91ADBC0088DEB6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9C9780B22E91E01000310CE3 /* SDL2_ttf.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SDL2_ttf.framework;
+			remoteRef = 9C9780B12E91E01000310CE3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */

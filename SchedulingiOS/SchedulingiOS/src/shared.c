@@ -11,6 +11,7 @@
 #include "include/objc_bridge.h"
 
 #include <SDL2/SDL.h>
+#include <SDL2_ttf/SDL_ttf.h>
 
 // TODO: Globals are evil.
 SDL_Window *wnd;
@@ -26,6 +27,10 @@ static void err(const char *str) {
 void initialize_sdl(void) {
     if (SDL_Init(SDL_INIT_VIDEO) < 0) {
         err("Could not initialize SDL2!");
+    }
+    
+    if (TTF_Init() < 0) {
+        err("Could not initialize SDL2_ttf!");
     }
     
     SDL_SetHint(SDL_HINT_ORIENTATIONS, "Portrait");

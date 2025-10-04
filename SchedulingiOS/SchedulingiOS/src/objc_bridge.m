@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "objc_bridge.h"
 
-void showStatusBar() {
+void showStatusBar(void) {
     dispatch_async(dispatch_get_main_queue(), ^{
         [UIApplication sharedApplication].statusBarHidden = NO;
     });

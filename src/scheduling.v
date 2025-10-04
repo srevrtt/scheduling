@@ -1,12 +1,10 @@
 module scheduling
 
-// square calculates the second power of `x`
-@[export: 'sch_square']
-pub fn square(x int) int {
-	return x * x
-}
+#include "../SchedulingiOS/SchedulingiOS/src/include/v_bridge.h"
 
-@[export: 'sch_add']
-pub fn add(x int, y int) int {
-	return x + y
+fn C.draw_rect(x int, y int, w int, h int, r int, g int, b int)
+
+@[export: 'sch_loop']
+fn sch_loop() {
+	C.draw_rect(10, 10, 100, 100, 150, 150, 150)
 }

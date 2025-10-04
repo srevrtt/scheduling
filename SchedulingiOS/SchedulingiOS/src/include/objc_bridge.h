@@ -8,6 +8,6 @@
 #ifndef OBJC_BRIDGE_H
 #define OBJC_BRIDGE_H
 
-void showStatusBar();
+void showStatusBar(void);
 
 #endif

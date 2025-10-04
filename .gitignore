@@ -26,3 +26,4 @@ build
 SchedulingiOS/SchedulingiOS.xcodeproj/xcuserdata
 SchedulingiOS/SchedulingiOS.xcuserdatad/
 SchedulingiOS/SchedulingiOS.xcodeproj/project.xcworkspace/xcuserdata
+*.a

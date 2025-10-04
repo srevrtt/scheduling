@@ -8,25 +8,14 @@
 #include <stdbool.h>
 
 #include <SDL2/SDL.h>
+
+#include "include/shared.h"
 #include "objc_bridge.h"
 
+extern void sch_loop(void);
+
 int main(int argc, char *argv[]) {
-    SDL_Init(SDL_INIT_VIDEO);
-    
-    SDL_SetHint(SDL_HINT_ORIENTATIONS, "Portrait");
-    
-    SDL_Window *window = SDL_CreateWindow("Scheduling App - iOS", SDL_WINDOWPOS_CENTERED,
-                                          SDL_WINDOWPOS_CENTERED, 640, 480,
-                                          SDL_WINDOW_ALLOW_HIGHDPI);
-    
-    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, 0);
-    
-    // Set the window size
-    int windowW, windowH = 0;
-    SDL_GetWindowSize(window, &windowW, &windowH);
-    SDL_RenderSetLogicalSize(renderer, windowW, windowH);
-    
-    showStatusBar();
+    initialize_sdl();
     
     // App loop
     SDL_Event event;
@@ -39,15 +28,17 @@ int main(int argc, char *argv[]) {
             }
         }
         
-        SDL_RenderClear(renderer);
+        SDL_Renderer *renderer = get_sdl_renderer();
+        
         SDL_SetRenderDrawColor(renderer, 10, 10, 10, 255);
+        SDL_RenderClear(renderer);
+        sch_loop(); // Called in V
         SDL_RenderPresent(renderer);
+
         SDL_Delay(1);
     }
 
-    // When the app is quit
-    SDL_DestroyWindow(window);
-    SDL_Quit();
+    destroy_sdl();
     
     return 0;
 }

@@ -7,8 +7,10 @@
 
 #include <stdlib.h>
 #include <assert.h>
+#include <string.h>
 
 #include "include/v_bridge.h"
+#include "include/objc_bridge.h"
 #include "include/shared.h"
 
 #include <SDL2/SDL.h>
@@ -25,20 +27,21 @@ static font_arr ttf_fonts;
 
 void draw_rect(int x, int y, int w, int h, int r, int g, int b) {
     SDL_Renderer *renderer = get_sdl_renderer();
-    SDL_Rect rect = { x, y + 44, w, h }; // Offset the y by 44px for the system bar
     
+    int *offsets = computeSafeAreaOffset();
+    SDL_Rect rect = { x + offsets[0], y + offsets[1], w, h };
     SDL_SetRenderDrawColor(renderer, r, g, b, 255);
     SDL_RenderFillRect(renderer, &rect);
 }
 
-int create_font(const char *font_path, int font_size) {
+int create_font(const char *font_name, int font_size) {
     // Make sure we have enough room in the array
     assert(ttf_fonts.fonts_count < FONT_ARR_SIZE);
 
-    TTF_Font *font = TTF_OpenFont(font_path, font_size);
+    TTF_Font *font = loadSystemFont(font_name, font_size);
     
     if (font == NULL) {
-        fprintf(stderr, "Failed to open font at path %s.\n", font_path);
+        fprintf(stderr, "Failed to open font at path %s.\n", font_name);
         exit(EXIT_FAILURE);
     }
     
@@ -60,7 +63,9 @@ void draw_text_runtime(int font_idx, const char *text, int x, int y, int r, int 
     // Get the rendered text size in pixels
     int width, height = 0;
     SDL_QueryTexture(texture, NULL, NULL, &width, &height);
-    SDL_Rect dstrect = { x, y, width, height };
+    
+    int *offsets = computeSafeAreaOffset();
+    SDL_Rect dstrect = { x + offsets[0], y + offsets[1], width, height };
     
     // Render the text
     SDL_RenderCopy(renderer, texture, NULL, &dstrect);
@@ -68,4 +73,26 @@ void draw_text_runtime(int font_idx, const char *text, int x, int y, int r, int 
     // Free the memory we don't need
     SDL_DestroyTexture(texture);
     SDL_FreeSurface(surface);
+}
+
+// Renders text to the screen using the iOS default system font, rather than a custom
+// specified font (SF Pro).
+void draw_text_runtime_default(const char *text, int font_size, int x, int y, int r, int g,
+                              int b) {
+    SDL_Color color = { r, g, b, 255 };
+    SDL_Renderer *renderer = get_sdl_renderer();
+
+    SDL_Texture *texture = renderDefaultText(renderer, NULL, text,
+                                             (float)font_size, color);
+
+    // Draw the text
+    int width, height = 0;
+    SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+    
+    int *offsets = computeSafeAreaOffset();
+    SDL_Rect dst = { x + offsets[0], y + offsets[1], width, height };
+    SDL_RenderCopy(renderer, texture, NULL, &dst);
+    
+    // Free memory
+    SDL_DestroyTexture(texture);
 }

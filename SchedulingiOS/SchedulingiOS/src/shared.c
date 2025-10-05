@@ -33,18 +33,18 @@ void initialize_sdl(void) {
         err("Could not initialize SDL2_ttf!");
     }
     
-    SDL_SetHint(SDL_HINT_ORIENTATIONS, "Portrait");
+    SDL_SetHint(SDL_HINT_ORIENTATIONS, "Portrait");    SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "linear");
     
     wnd = SDL_CreateWindow("Scheduling App - iOS", SDL_WINDOWPOS_CENTERED,
-                                          SDL_WINDOWPOS_CENTERED, 640, 480,
+                                          SDL_WINDOWPOS_CENTERED, 2556, 1179,
                                           SDL_WINDOW_ALLOW_HIGHDPI);
     
     ren = SDL_CreateRenderer(wnd, -1, 0);
     
     // Set the window size
-    int windowW, windowH = 0;
-    SDL_GetWindowSize(wnd, &windowW, &windowH);
-    SDL_RenderSetLogicalSize(ren, windowW, windowH);
+//    int windowW, windowH = 0;
+//    SDL_GetWindowSize(wnd, &windowW, &windowH);
+//    SDL_RenderSetLogicalSize(ren, windowW, windowH);
     
     // Show the status bar (in objc_bridge.m)
     showStatusBar();

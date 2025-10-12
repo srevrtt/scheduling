@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C61BBF32E9B41D80041261A /* gc.c in Sources */ = {isa = PBXBuildFile; fileRef = 9C61BBF12E9B41D80041261A /* gc.c */; };
 		9C814DC12E91AE610088DEB6 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */; };
 		9C814DC22E91AE610088DEB6 /* SDL2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DAC2E91ADBC0088DEB6 /* SDL2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9C814DDF2E91BE290088DEB6 /* libscheduling.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C814DDE2E91BE290088DEB6 /* libscheduling.a */; };
@@ -47,6 +48,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C61BBDD2E9B41D80041261A /* cord.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cord.h; sourceTree = "<group>"; };
+		9C61BBDE2E9B41D80041261A /* cord_pos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cord_pos.h; sourceTree = "<group>"; };
+		9C61BBDF2E9B41D80041261A /* ec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ec.h; sourceTree = "<group>"; };
+		9C61BBE02E9B41D80041261A /* gc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc.h; sourceTree = "<group>"; };
+		9C61BBE12E9B41D80041261A /* gc_allocator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_allocator.h; sourceTree = "<group>"; };
+		9C61BBE22E9B41D80041261A /* gc_backptr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_backptr.h; sourceTree = "<group>"; };
+		9C61BBE32E9B41D80041261A /* gc_config_macros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_config_macros.h; sourceTree = "<group>"; };
+		9C61BBE42E9B41D80041261A /* gc_disclaim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_disclaim.h; sourceTree = "<group>"; };
+		9C61BBE52E9B41D80041261A /* gc_gcj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_gcj.h; sourceTree = "<group>"; };
+		9C61BBE62E9B41D80041261A /* gc_inline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_inline.h; sourceTree = "<group>"; };
+		9C61BBE72E9B41D80041261A /* gc_mark.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_mark.h; sourceTree = "<group>"; };
+		9C61BBE82E9B41D80041261A /* gc_pthread_redirects.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_pthread_redirects.h; sourceTree = "<group>"; };
+		9C61BBE92E9B41D80041261A /* gc_tiny_fl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_tiny_fl.h; sourceTree = "<group>"; };
+		9C61BBEA2E9B41D80041261A /* gc_typed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_typed.h; sourceTree = "<group>"; };
+		9C61BBEB2E9B41D80041261A /* gc_version.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc_version.h; sourceTree = "<group>"; };
+		9C61BBEC2E9B41D80041261A /* javaxfc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = javaxfc.h; sourceTree = "<group>"; };
+		9C61BBED2E9B41D80041261A /* leak_detector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = leak_detector.h; sourceTree = "<group>"; };
+		9C61BBEF2E9B41D80041261A /* gc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gc.h; sourceTree = "<group>"; };
+		9C61BBF12E9B41D80041261A /* gc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = gc.c; sourceTree = "<group>"; };
 		9C814D7B2E91AD120088DEB6 /* SchedulingiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SchedulingiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SDL.xcodeproj; path = ../thirdparty/SDL/Xcode/SDL/SDL.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9C814DDE2E91BE290088DEB6 /* libscheduling.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libscheduling.a; path = Libraries/libscheduling.a; sourceTree = "<group>"; };
@@ -75,9 +95,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C61BBEE2E9B41D80041261A /* gc */ = {
+			isa = PBXGroup;
+			children = (
+				9C61BBDD2E9B41D80041261A /* cord.h */,
+				9C61BBDE2E9B41D80041261A /* cord_pos.h */,
+				9C61BBDF2E9B41D80041261A /* ec.h */,
+				9C61BBE02E9B41D80041261A /* gc.h */,
+				9C61BBE12E9B41D80041261A /* gc_allocator.h */,
+				9C61BBE22E9B41D80041261A /* gc_backptr.h */,
+				9C61BBE32E9B41D80041261A /* gc_config_macros.h */,
+				9C61BBE42E9B41D80041261A /* gc_disclaim.h */,
+				9C61BBE52E9B41D80041261A /* gc_gcj.h */,
+				9C61BBE62E9B41D80041261A /* gc_inline.h */,
+				9C61BBE72E9B41D80041261A /* gc_mark.h */,
+				9C61BBE82E9B41D80041261A /* gc_pthread_redirects.h */,
+				9C61BBE92E9B41D80041261A /* gc_tiny_fl.h */,
+				9C61BBEA2E9B41D80041261A /* gc_typed.h */,
+				9C61BBEB2E9B41D80041261A /* gc_version.h */,
+				9C61BBEC2E9B41D80041261A /* javaxfc.h */,
+				9C61BBED2E9B41D80041261A /* leak_detector.h */,
+			);
+			path = gc;
+			sourceTree = "<group>";
+		};
+		9C61BBF02E9B41D80041261A /* include */ = {
+			isa = PBXGroup;
+			children = (
+				9C61BBEE2E9B41D80041261A /* gc */,
+				9C61BBEF2E9B41D80041261A /* gc.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		9C61BBF22E9B41D80041261A /* libgc */ = {
+			isa = PBXGroup;
+			children = (
+				9C61BBF02E9B41D80041261A /* include */,
+				9C61BBF12E9B41D80041261A /* gc.c */,
+			);
+			name = libgc;
+			path = ../thirdparty/libgc;
+			sourceTree = SOURCE_ROOT;
+		};
 		9C814D722E91AD120088DEB6 = {
 			isa = PBXGroup;
 			children = (
+				9C61BBF22E9B41D80041261A /* libgc */,
 				9C97808A2E91E01000310CE3 /* SDL_ttf.xcodeproj */,
 				9C814DDE2E91BE290088DEB6 /* libscheduling.a */,
 				9C814D992E91ADBC0088DEB6 /* SDL.xcodeproj */,
@@ -220,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C61BBF32E9B41D80041261A /* gc.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,6 +422,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../thirdparty/SDL/include\"",
 					"\"$(PROJECT_DIR)\"",
+					"\"$(PROJECT_DIR)/../thirdparty/libgc/include",
 				);
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -396,6 +462,7 @@
 				HEADER_SEARCH_PATHS = (
 					"\"$(SRCROOT)/../thirdparty/SDL/include\"",
 					"\"$(PROJECT_DIR)\"",
+					"\"$(PROJECT_DIR)/../thirdparty/libgc/include",
 				);
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

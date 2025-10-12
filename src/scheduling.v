@@ -14,13 +14,14 @@ fn C.render_present()
 
 pub struct SchedulingApp {
 mut:
-    test_text ui.Text
+    layout ui.StackLayout
 }
 
 @[export: 'app_main']
 fn app_main() {
     mut app := SchedulingApp{}
-    app.test_text = ui.create_text('Hello world!', 20, ui.color_white())
+    app.layout = ui.create_stack_layout(10, 10)
+    app.layout.add_text('Hello', 14, ui.color_white())
 
     mut run_app := true
 
@@ -33,7 +34,6 @@ fn app_main() {
 
         // Rendering
         C.render_clear()
-        app.test_text.draw(10, 10)
         C.render_present()
     }
 }

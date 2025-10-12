@@ -166,6 +166,11 @@ int create_static_text(const char *text, int font_size, int r, int g, int b) {
     return static_text.text_count - 1;
 }
 
+int *measure_static_text(int text_idx) {
+    assert((text_idx >= 0) && (text_idx < static_text.text_count));
+    return static_text.text_sizes[text_idx];
+}
+
 void draw_static_text(int text_idx, int x, int y) {
     assert((text_idx >= 0) && (text_idx < static_text.text_count));
     

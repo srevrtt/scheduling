@@ -65,3 +65,9 @@ pub fn (mut layout StackLayout) add_text(text_string string, font_size int, colo
 
 	layout.text_widgets << text
 }
+
+pub fn (layout StackLayout) draw() {
+	for text in layout.text_widgets {
+		text.draw()
+	}
+}
